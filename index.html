@@ -301,6 +301,15 @@
 </section>
 
 
+
+
+<img id="yourImageId" src="your-image.png" alt="Image">
+<div id="imageModal">
+    <img src="your-image.png" alt="Large View">
+</div>
+
+
+
 <!-- Lightbox Modal -->
 <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img">
@@ -330,5 +339,60 @@
 
 
 <script src="script.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector("nav"); // Select the navbar
+        const images = document.querySelectorAll("img"); // Select all images
+
+        images.forEach((image) => {
+            image.addEventListener("click", function () {
+                nav.style.display = "none"; // Hide navbar when image is clicked
+
+                // Create an overlay to show the image in full view
+                const overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "0";
+                overlay.style.left = "0";
+                overlay.style.width = "100vw";
+                overlay.style.height = "100vh";
+                overlay.style.background = "rgba(0, 0, 0, 0.8)";
+                overlay.style.display = "flex";
+                overlay.style.alignItems = "center";
+                overlay.style.justifyContent = "center";
+                overlay.style.zIndex = "1000";
+
+                // Clone the clicked image and make it large
+                const imgClone = image.cloneNode();
+                imgClone.style.maxWidth = "90vw";
+                imgClone.style.maxHeight = "90vh";
+                imgClone.style.border = "5px solid white";
+                imgClone.style.borderRadius = "10px";
+
+                // Append image to overlay
+                overlay.appendChild(imgClone);
+                document.body.appendChild(overlay);
+
+                // When overlay is clicked, remove it and show the navbar again
+                overlay.addEventListener("click", function () {
+                    document.body.removeChild(overlay);
+                    nav.style.display = "flex"; // Show navbar again
+                });
+
+                // When `Esc` is pressed, remove overlay and show navbar
+                document.addEventListener("keydown", function (event) {
+                    if (event.key === "Escape") {
+                        if (document.body.contains(overlay)) {
+                            document.body.removeChild(overlay);
+                            nav.style.display = "flex"; // Show navbar again
+                        }
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
 </body>
 </html>

@@ -50,3 +50,5 @@ function openLightbox(src) {
 function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
+
+
