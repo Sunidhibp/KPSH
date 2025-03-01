@@ -159,7 +159,7 @@ section {
 /* Faculty Section */
 #faculty {
     background: linear-gradient(135deg, #031102, #021027);
-    color: #725d5d;
+    color: white;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -374,23 +374,54 @@ section {
 /* Contact Us Section */
 #contact {
     background: linear-gradient(135deg, #4a0e39, #16012f);
-    color: #ffffff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    background-size: cover;
+    background-color: #f8f9fa;
+    background-position: center;
+    padding: 50px 0;
 }
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures form and map are aligned properly */
+    flex-wrap: wrap;
+    
+}
+
+
+.col-md-6 {
+    flex: 0 0 48%; /* Adjust width so they take proper space */
+    max-width: 50%;
+    padding: 20px;
+   
+}
+
+
+.contact-info {
+    margin-bottom: 30px;
+    
+    
+}
+
+
 
 #contact form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    width: 100%;
     margin: 0 auto;
+    padding: 45px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 48%; /* Adjust width so they take proper space */
+   
 }
+
 
 #contact input, #contact textarea {
     margin-bottom: 15px;
@@ -405,19 +436,20 @@ section {
 #contact button {
     background: linear-gradient(45deg, #89fffd, #ef32d9);
     border: none;
-    padding: 15px;  
+    padding: 20px;  
     color: white;
     cursor: pointer;
     font-size: 1.1rem;  
     border-radius: 8px;
     transition: background 0.3s ease;
-    width: 100%; 
+    width: 100%;
 }
 
 #contact button:hover {
     background: linear-gradient(45deg, #42a5f5, #ef32d9);  /* Slightly darker gradient on hover */
     opacity: 0.9;
 }
+
 
 
 /*footer*/
