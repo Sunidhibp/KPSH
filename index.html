@@ -261,27 +261,34 @@
 
 
 <!-- Faculty Section -->
+
 <section id="faculty">
     <h2>Our Faculty</h2>
     <div class="faculty-container">
         <!-- Add faculty details here -->
         <div class="faculty-card">
             <img src="images/faculty2.jpg" alt="Faculty 1">
-            <h3>Vanajakshi M.S</h3>
-            <p>headmistress</p>
-            <p>TCH, BA</p>
+            <div class="overlay">
+                <h3>Vanajakshi M.S</h3>
+                <p>Headmistress</p>
+                <p>TCH, BA</p>
+            </div>
         </div>
         <div class="faculty-card">
             <img src="images/faculty1.jpg" alt="Faculty 2">
-            <h3>Pramod Jeeval B L</h3>
-            <p>Assistant Teacher (GPT)</p>
-            <p>Msc B.Ed, ADCA</p>
+            <div class="overlay">
+                <h3>Pramod Jeeval B L</h3>
+                <p>Assistant Teacher (GPT)</p>
+                <p>MSc B.Ed, ADCA</p>
+            </div>
         </div>
         <div class="faculty-card">
-            <img src="images/faculty3.jpg" alt="Faculty 1">
-            <h3>Y.T. Jayalakshmi</h3>
-            <p>Mathematics Teacher</p>
-            <p>PUC, TCH, BA</p>
+            <img src="images/faculty3.jpg" alt="Faculty 3">
+            <div class="overlay">
+                <h3>Y.T. Jayalakshmi</h3>
+                <p>Mathematics Teacher</p>
+                <p>PUC, TCH, BA</p>
+            </div>
         </div>      
     </div>
 </section>
@@ -340,58 +347,7 @@
 
 <script src="script.js"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const nav = document.querySelector("nav"); // Select the navbar
-        const images = document.querySelectorAll("img"); // Select all images
 
-        images.forEach((image) => {
-            image.addEventListener("click", function () {
-                nav.style.display = "none"; // Hide navbar when image is clicked
-
-                // Create an overlay to show the image in full view
-                const overlay = document.createElement("div");
-                overlay.style.position = "fixed";
-                overlay.style.top = "0";
-                overlay.style.left = "0";
-                overlay.style.width = "100vw";
-                overlay.style.height = "100vh";
-                overlay.style.background = "rgba(0, 0, 0, 0.8)";
-                overlay.style.display = "flex";
-                overlay.style.alignItems = "center";
-                overlay.style.justifyContent = "center";
-                overlay.style.zIndex = "1000";
-
-                // Clone the clicked image and make it large
-                const imgClone = image.cloneNode();
-                imgClone.style.maxWidth = "90vw";
-                imgClone.style.maxHeight = "90vh";
-                imgClone.style.border = "5px solid white";
-                imgClone.style.borderRadius = "10px";
-
-                // Append image to overlay
-                overlay.appendChild(imgClone);
-                document.body.appendChild(overlay);
-
-                // When overlay is clicked, remove it and show the navbar again
-                overlay.addEventListener("click", function () {
-                    document.body.removeChild(overlay);
-                    nav.style.display = "flex"; // Show navbar again
-                });
-
-                // When `Esc` is pressed, remove overlay and show navbar
-                document.addEventListener("keydown", function (event) {
-                    if (event.key === "Escape") {
-                        if (document.body.contains(overlay)) {
-                            document.body.removeChild(overlay);
-                            nav.style.display = "flex"; // Show navbar again
-                        }
-                    }
-                });
-            });
-        });
-    });
-</script>
 
 
 </body>
