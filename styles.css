@@ -28,6 +28,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border: 10px solid black;
+    border-radius: 2px;
 }
 
 header h1 {
@@ -45,6 +47,8 @@ nav {
     top: 0;
     display: flex;
     flex-direction: column;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 nav a {
@@ -112,6 +116,8 @@ header h1, header h2 {
     justify-content: center;
     text-align: center;
     padding: 20px;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 .hero-content h2 {
@@ -136,7 +142,7 @@ section {
 
 /* About Us Section */
 #about {
-    background: linear-gradient(135deg, #200619, #021027);
+    background: linear-gradient(135deg, #331919, #021027);
     color: #ffffff;
     height: 100vh;
     display: flex;
@@ -145,6 +151,8 @@ section {
     align-items: center;
     text-align: center;
     padding: 20px;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 #about h2 {
@@ -167,6 +175,8 @@ section {
     align-items: center;
     text-align: center;
     padding: 20px;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 .faculty-container {
@@ -228,6 +238,8 @@ section {
     height: 100vh;
     padding: 5rem;
     text-align: center;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 .events-container {
@@ -270,6 +282,8 @@ section {
     height: 100vh;
     padding: 5rem;
     text-align: center;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 .infrastructure-container {
@@ -449,6 +463,92 @@ section {
     background: linear-gradient(45deg, #42a5f5, #ef32d9);  /* Slightly darker gradient on hover */
     opacity: 0.9;
 }
+
+
+
+
+
+/* SDMC Section */
+#sdmc {
+    padding: 150px 20px;
+    margin: 20px auto;
+    width: 100%;
+    background: linear-gradient(45deg, #426e48, #335b5c);
+    border: 10px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sdmc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sdmc-container .president img,
+.sdmc-container .group-photo img {
+    border: 2px solid black;
+}
+
+.sdmc-container .president img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.sdmc-container .group-photo img {
+    width: 800px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.sdmc-container .name {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+
+/* Alumni Section */
+#alumni {
+    padding: 150px 20px;
+    margin: 40px auto;
+    width: 100%;
+    background: linear-gradient(45deg, #073153, #c8abc5);
+    border: 10px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.alumni-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alumni-container .president img,
+.alumni-container .group-photo img {
+    border: 2px solid black;
+}
+
+.alumni-container .president img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.alumni-container .group-photo img {
+    width: 800px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.alumni-container .name {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
 
 
 
